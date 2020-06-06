@@ -15,17 +15,53 @@
                 width: 70%;
                 padding: 6%;
                 margin: 30% auto 10% auto;
-                border: solid 3px black;
+                border: solid 3px rgb(0, 0, 0);
             }
             section#inicio
             {
                 margin: 10% auto 10% auto;
-
             }
 
+            div#SAC
+            {
+                margin: -5% 30% 0% 30%;
+                text-align: center;
+            }
+            input
+            {
+                margin: 0% auto 0% auto%;
+                border: solid 2px rgb(0, 0, 0);
+                text-align: center;
+                padding: 3px;
+                margin: 1%;
+                background-color:rgba(0, 0, 0, 0.342);
+                color: rgb(255, 255, 255);
+            }
+            textarea
+            {
+                border: solid 2px rgb(0, 0, 0);
+                background-color:rgba(0, 0, 0, 0.342);
+                color: rgb(255, 255, 255);
+                resize: none;
+                text-align: center;
+                padding: 3px;
+                margin:1%
+            }
+            fieldset
+            {
+                border: solid 2px rgb(0, 0, 0);
+                border-radius: 10px;
+                background-color:rgba(0, 0, 0, 0.342);
+                padding: 3%;
+            }
+            hr 
+            {
+                border-color: rgb(0, 0, 0);
+                width: 50%;
+            }
             h1
             {
-                color: rgb(255, 255, 255);
+                color: rgb(32, 14, 14);
             }
             h2
             {
@@ -68,6 +104,14 @@
 	            top:0%;
 	            left:0%;
 	            text-align:center;
+                border-bottom: solid 2px rgb(0, 0, 0);
+            }
+            footer
+            {
+                background: linear-gradient(to right, rgb(122, 122, 122), rgba(255, 255, 255, 0.445), rgb(122, 122, 122));
+                border-top: solid 3px rgb(0, 0, 0);
+                padding: 1.5%;
+                text-align: center;
             }
             nav
             {
@@ -86,9 +130,7 @@
             }
             nav li :hover
             {
-                text-decoration: underline;
-                padding: 0.3% 1.5% 0.3% 1.5%;
-                
+                text-decoration: underline;                
             }
             nav a
             {
@@ -102,6 +144,20 @@
                 position: fixed;     
                 margin: -4% 90% 0% -50%;      
             }
+            img.col1 { width: 20%; }
+            img.col2 { width: 40%; }
+            img.col3 { width: 60%; }
+            img#toyota { width: 120%; margin-left: -11%;}
+            
+            table
+            {
+                text-align: center;
+                padding-right: 18%;
+            }
+            section#redes img
+            {
+                width: 5%;
+            }
 
         </style>
     </head>
@@ -112,11 +168,11 @@
                     <img id="logo"src="logo.png"/>
                     <h1>Menu</h1>
                     <ul>
-                        <li> <a href="#inicio">Início</a> </li>
-                        <li> <a href="#pt2">pt2</a> </li>
-                        <li> <a href="#pt3">pt3</a> </li>
-                        <li> <a href="#pt4"> pt4 </a> </li>
-                        <li> <a href="#pt5">pt5</a> </li>
+                        <li> <a href="#inicio"> Sobre nós </a> </li>
+                        <li> <a href="#pt2"> Redes Sociais </a> </li>
+                        <li> <a href="#pt3"> Portifólio </a> </li>
+                        <li> <a href="#pt4"> Sustentabilidade </a> </li>
+                        <li> <a href="#pt5"> SAC </a> </li>                        
                     </ul>
                 </h4>
             </nav>
@@ -124,29 +180,84 @@
         <p id="inicio"></p>
         <br/> <br/> <br/> <br/>
         <section id="inicio">
-            inicio
+            <h4> Sobre nós </h4>
+            <p> Nós somos a The Growth Tree, uma empresa criada em abril de 2020, por 4 amigos que perceberam uma grande chance de crescimento e visibilidade no mundo tecnológico, com o intuito de fazer com que a tecnologia e modernidade “floresça” nos sistemas de seus clientes facilitando a vida dos usuários e compactando todo o sistema. Nossa meta é fazer com que as pessoas tenham outra visão sobre a tecnologia onde possa fazer da internet o seu dia a dia, e cada vez mais usufruir disso. </p>
         </section>
         <p id="pt2">  </p>
-        <section>
-            pt2
-            
+        <section id="redes">
+            <h4> Redes Sociais </h4>
+            <p> Aqui estão alguns lugares nos quais voce consegue nos encontrar para acompanhar nossos trabalhos e/ou entrar em contato conosco 
+                <img src="img/insta.png"/> @tgtdevelopment <br/> <br/>
+                <img src="img/face.png"/> TG Tree <br/> <br/>
+                <img src="img/linkedin.png"/> The Growth Tree <br/> <br/>
+            </p>
         </section>
         <p id="pt3"></p>
         <section>
-            pt3
+            <h4> Nossos serviços </h4>
+            <ul>
+                <li>Desenvolvimento de sites para empresas.</li>
+                <li>Desenvolvimento de apps (para Android e IOS).</li>
+                <li>Fábrica de software.</li>
+                <li>Manutenção de sites.</li>
+            </ul>
+            <h4> Portifólio </h4>
+            <p> Aqui temos alguns exemplos dos nossos serviços, essas são empresas pras quais já trabalhamos: </p>
+            <table id="empresas">
+                <tr>
+                    <td class="col1"> <img class="col1" src="img/pg.png"/> </td>
+                    <td> Python Games </td>
+                    <td class="col2"> <img class="col2" src="img/extra.png"/> </td> 
+                    <td> Extra </td>
+                    <td> <img class="col3" src="img/bmw.png"/> </td>
+                    <td  class="co31"> BMW </td>
+                </tr>
+                <tr>
+                    <td class="col1"> <img class="col1" src="img/eg.png"/> </td>
+                    <td> Epic Games </td>
+                    <td class="col2"> <img class="col2" src="img/sonda.png"/> </td> 
+                    <td> Sonda </td>
+                    <td class="col3"> <img class="col3" src="img/honda.PNG"/> </td>
+                    <td> Honda </td>
+                </tr>
+                <tr>
+                    <td class="col1"> <img class="col1" src="img/ea.png"/> </td>
+                    <td> EA </td>
+                    <td class="col2"> <img class="col2" src="img/makro.png"/> </td> 
+                    <td> Makro </td>
+                    <td class="col3"> <img id="toyota" src="img/toyota.PNG"/> </td>
+                    <td> Toyota </td>
+                </tr>
 
+            </table>
         </section>
         <p id="pt4"></p>
         <section>
             pt4
+
         </section>
+
         <p id="pt5"></p>
         <section>
-            pt5
-
-
-
-
+            <div id="SAC">
+            <h4>SAC</h4>
+                <fieldset>
+                    <input id="txtnome" type="text" size="40" maxlength="50" placeholder="Preencha o nome completo"/> <br/>
+                    <input id="txtemail" type="email" size="40" placeholder="Preencha com seu e-mail"/> <br/>
+                    <input name="sexo" id="txtsexof" type="radio" value="F" checked />Feminino
+                    <input name="sexo" id="txtsexom" type="radio" value="M"/>Masculino <br/>
+                    <textarea cols=50 rows=4 placeholder="Seu comentário"></textarea> <br/> 
+                    <input type="button" value="ENVIAR" onClick="alert('Dados enviados com sucesso!!!')"/>
+                    <input type="reset" size="40" value="LIMPAR"/>
+                </fieldset>
+            </div>
         </section>
+        <footer>
+            <h3>
+                Deixei a tecnologia crescer em você <hr/>
+                The Growth Tree
+            </h3>
+        </footer>
+
     </body>
 </html>
