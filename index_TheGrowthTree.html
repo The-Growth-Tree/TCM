@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>        
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+        <title>The Growth Tree</title>
+        <style type="text/css">
+            body
+            {
+                background-color: rgb(122, 122, 122);
+                font-size: 100%;
+            }
+            section
+            {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background-color: rgba(255, 255, 255, 0.445);
+                width: 70%;
+                padding: 6%;
+                margin: 30% auto 10% auto;
+                border: solid 3px rgb(0, 0, 0);
+            }
+            section#inicio
+            {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin: 10% auto 10% auto;
+            }
+            figure.foto-legenda
+            {
+                position : relative;
+            }
+            figure.foto-legenda figcaption
+            {
+                opacity: 0;
+                position: absolute;
+                top: 0px;
+                background-color: rgba(0, 0, 0, 0.455);
+                width: 70%
+                height: 100%;
+                padding: 10px;
+                margin-left: 105px;
+                box-sizing: border-box;
+                transition: opacity 1s;
+            }
+            figure.foto-legenda img
+            {
+                width: 70%;
+                height: 70%;
+                margin: 0px 110px 0px 105px;
+            }
+            figure.foto-legenda:hover figcaption
+            {
+                opacity: 1;
+            } 
+            figure.sem-legenda img
+            {
+                width: 70%;
+                height: 70%;
+                margin: 0px 110px 0px 105px;
+            }
+
+            div#SAC
+            {
+                margin: -5% 30% 0% 30%;
+                text-align: center;
+            }
+            input
+            {
+                margin: 0% auto 0% auto%;
+                border: solid 2px rgb(0, 0, 0);
+                text-align: center;
+                padding: 3px;
+                margin: 1%;
+                background-color:rgba(0, 0, 0, 0.342);
+                color: rgb(255, 255, 255);
+            }
+            textarea
+            {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                border: solid 2px rgb(0, 0, 0);
+                background-color:rgba(0, 0, 0, 0.342);
+                color: rgb(255, 255, 255);
+                resize: none;
+                text-align: center;
+                padding: 3px;
+                margin:1%
+            }
+            fieldset
+            {
+                border: solid 2px rgb(0, 0, 0);
+                border-radius: 10px;
+                background-color:rgba(0, 0, 0, 0.342);
+                padding: 3%;
+            }
+            hr 
+            {
+                border-color: rgb(0, 0, 0);
+                width: 50%;
+            }
+            h1
+            {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: rgb(255, 255, 255);
+                text-align: center;
+            }
+            h2
+            {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                
+                padding-top: 2%;
+                padding-bottom: 2%;
+            }
+            li h4
+            {
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: rgb(255, 255, 255);
+            }
+            h4
+            {
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-indent: 6%;
+            }
+            h5
+            {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-align: center;
+            }
+            p
+            {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-indent: 6%;
+            }
+            p#inicio
+            {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin-bottom: 15%;
+            }
+
+
+            header
+            {
+                position: fixed;
+                background-color: rgb(64, 105, 167);
+                width:100%;
+                padding:0.5%;
+                padding-bottom: 3%;
+                margin-top:0%;
+	            margin-right:0%;
+	            margin-left:0%;
+	            top:0%;
+	            left:0%;
+	            text-align:center;
+                border-bottom: solid 2px rgb(0, 0, 0);
+            }
+            footer
+            {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background: linear-gradient(to right, rgb(122, 122, 122), rgba(255, 255, 255, 0.445), rgb(122, 122, 122));
+                border-top: solid 3px rgb(0, 0, 0);
+                padding: 1.5%;
+                text-align: center;
+            }
+            nav
+            {
+                text-align: center;
+                padding-top: 2%;
+            }
+            nav ul
+            {
+                list-style-type: none;
+            }
+            nav li
+            {
+                display: inline-block;
+                padding: 0.3% 1.5% 0.3% 1.5%;
+                background-color: rgba(0, 0, 0, 0.233);
+            }
+            nav li :hover
+            {
+                text-decoration: underline;                
+            }
+            nav a
+            {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+            }
+            img#logo
+            {
+                width: 20%;
+                position: absolute;
+                position: fixed;     
+                margin: -4% 90% 0% -50%;      
+            }
+            img.col1 { width: 20%; }
+            img.col2 { width: 40%; }
+            img.col3 { width: 60%; }
+            img#toyota { width: 120%; margin-left: -11%;}
+            
+            table
+            {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                text-align: center;
+                padding-right: 18%;
+            }
+            section#redes img
+            {
+                width: 5%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h4>
+                    <img id="logo"src="https://3.bp.blogspot.com/-H07FhBHBR-U/Xt63lV7tEcI/AAAAAAAAbU0/DSZskboAT74El3WSZK1FUIJpZZgH_mr6gCK4BGAYYCw/s320/logo.png"/>
+                    <h1>Menu</h1>
+                    <ul>
+                        <li> <a href="#inicio"> Sobre nós </a> </li>
+                        <li> <a href="#pt2"> Redes Sociais </a> </li>
+                        <li> <a href="#pt3"> Portifólio </a> </li>
+                        <li> <a href="#pt4"> Sustentabilidade </a> </li>
+                        <li> <a href="#pt5"> SAC </a> </li>                        
+                    </ul>
+                </h4>
+            </nav>
+        </header>
+        <p id="inicio"></p>
+        <br/> <br/> <br/> <br/>
+        <script>
+
+            function identifica(frase){
+            alert("Bem-vindo ao nosso site!");
+            var nome = prompt("Para melhorar a sua experiência, nos informe o seu nome:");
+            document.write("<h1>"+ frase + nome + "!" + "</h1>");
+            }
+            
+            identifica("Bem-vindo ");
+
+         </script>
+        <section id="inicio">
+            <h3> Sobre nós </h3>
+            <p> Nós somos a The Growth Tree, uma empresa criada em abril de 2020, por 4 amigos que perceberam uma grande chance de crescimento e visibilidade no mundo tecnológico, com o intuito de fazer com que a tecnologia e modernidade “floresça” nos sistemas de seus clientes facilitando a vida dos usuários e compactando todo o sistema. Nossa meta é fazer com que as pessoas tenham outra visão sobre a tecnologia onde possa fazer da internet o seu dia a dia, e cada vez mais usufruir disso. </p>
+            <div style="width: 100%">
+                <h3>Onde nos encontrar: </h3><iframe width="100%" height="300" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=-23.5206403, -46.728342891020475&amp;q=R.%20Guaip%C3%A1%2C%20678%20-%20Vila%20Leopoldina%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005089-000+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                    <a href="https://www.maps.ie/draw-radius-circle-map/">Google Maps</a>
+                </iframe>
+            </div>
+        </br>
+        </section>
+        <p id="pt2">  </p>
+        <section id="redes">
+            <h3> Redes Sociais </h3>
+            <p> Aqui estão alguns lugares nos quais voce consegue nos encontrar para acompanhar nossos trabalhos e/ou entrar em contato conosco <br/>
+                <img src="https://4.bp.blogspot.com/-hPRgXopifMY/Xt63Q4IMEaI/AAAAAAAAbT0/13HA4-PGQBEv-Ki5kyYVixGXv4TJSMUywCK4BGAYYCw/s320/insta.png"/><a href="https://www.instagram.com/tgtdevelopment/">@tgtdevelopment</a><br/> <br/>
+                <img src="https://1.bp.blogspot.com/-gzRQoEhNPzc/Xt63JXZ_5WI/AAAAAAAAbTg/KxWD-V0GZGwrZlaxsGEFrmtk9EK8l4rgACK4BGAYYCw/s320/face.png"/><a href="https://www.facebook.com/The-Growth-Tree-Development-107126324355554/">TG Tree</a><br/> <br/>
+                <img src="https://4.bp.blogspot.com/-XQVURiMHAOI/Xt63UbEeiVI/AAAAAAAAbT8/D8ITW1uJ2EsEbhG-kWNDchpkt_PrDuLdwCK4BGAYYCw/s400/linkedin.png"/> The Growth Tree <br/> <br/>
+            </p>
+        </section>
+        <p id="pt3"></p>
+        <section>
+            <h3> Nossos serviços </h3>
+            <ul>
+                <li>Desenvolvimento de sites para empresas.</li>
+                <li>Desenvolvimento de apps (para Android e IOS).</li>
+                <li>Fábrica de software.</li>
+                <li>Manutenção de sites.</li>
+            </ul>
+            <h3> Portifólio </h3>
+            <p> Aqui temos alguns exemplos dos nossos serviços, essas são empresas pras quais já trabalhamos: </p>
+            <table id="empresas">
+                <tr>
+                    <td class="col1">
+                        <img class="col1" src="https://1.bp.blogspot.com/-orJmHxUzpVg/Xt63bkPin9I/AAAAAAAAbUU/tNhRoymVanosdeKkPgtPUudZ74-dNPoWQCK4BGAYYCw/s320/pg.png"/></figure> </td>
+                    <td> Python Games </td>
+                    <td class="col2"> <img class="col2" src="https://4.bp.blogspot.com/-_YFBmE1qYDY/Xt63GTK6lkI/AAAAAAAAbTY/a9huNKDbOwsy2gUafiQRN-WnE3IcznJUQCK4BGAYYCw/s320/extra.png"/> </td> 
+                    <td> Extra </td>
+                    <td> <img class="col3" src="https://4.bp.blogspot.com/-0SkXIAqiBRo/Xt6275_QuDI/AAAAAAAAbTA/xe108CB817scCg14c6-aZ3Aq9l6kYEO3QCK4BGAYYCw/s320/bmw.png"/> </td>
+                    <td  class="co31"> BMW </td>
+                </tr>
+                <tr>
+                    <td class="col1"> <img class="col1" src="https://4.bp.blogspot.com/-tbzgTyprgJ8/Xt63DdmmqhI/AAAAAAAAbTQ/DoUSg7uFM7YZGaRslAF9XYeG_-3Zg3DdgCK4BGAYYCw/s400/eg.png"/> </td>
+                    <td> Epic Games </td>
+                    <td class="col2"> <img class="col2" src="https://1.bp.blogspot.com/-Cd0_MMs9TzA/Xt63eF04WzI/AAAAAAAAbUc/pUGnmNRZFXEd_I8RNQz_1tR185gbMPBrQCK4BGAYYCw/s320/sonda.png"/> </td> 
+                    <td> Sonda </td>
+                    <td class="col3"> <img class="col3" src="https://4.bp.blogspot.com/-EOi3Y-ZUe8I/Xt63L2yMQaI/AAAAAAAAbTs/FmQX_eJ9Svo3_Lvrpi0yQ14aNmLiECGKACK4BGAYYCw/s400/honda.PNG"/> </td>
+                    <td> Honda </td>
+                </tr>
+                <tr>
+                    <td class="col1"> <img class="col1" src="https://4.bp.blogspot.com/-5B7IF46nGYg/Xt63AsUFh9I/AAAAAAAAbTI/Lxu4ifx_xE0heYhZECOckMNHLPpKmB-GwCK4BGAYYCw/s400/ea.png"/> </td>
+                    <td> EA </td>
+                    <td class="col2"> <img class="col2" src="https://2.bp.blogspot.com/-MTSsvZxe6Es/Xt63YGHtgzI/AAAAAAAAbUI/5npP0AYXlgAQGUR2zbbAy70TcY4hJ0EiACK4BGAYYCw/s320/makro.png"/> </td> 
+                    <td> Makro </td>
+                    <td class="col3"> <img id="toyota" src="https://3.bp.blogspot.com/-f6nVarcKNVQ/Xt63hF6uAHI/AAAAAAAAbUo/mnnnPILDJcIVqYT-t7Z4Kj3NvwQZZi0iQCK4BGAYYCw/s320/toyota.PNG"/> </td>
+                    <td> Toyota </td>
+                </tr>
+
+            </table>
+        </section>
+        <p id="pt4"></p>
+        <section>
+            <h3>Sustentabilidade</h3>
+            <p>Temos o conceito de sustentabilidade aplicado em nossa empresa, fazendo com que os nossos funcionários ajudem o meio ambiente também! Devemos todos nos importar com a natureza e a situação da qual ela se encontra, se todos ajudarem será possível ter um cenário totalmente diferente do atual. Tudo por um planeta mais limpo!</p>
+        </section>
+        <p id="pt5"></p>
+        <section>
+            <div id="SAC">
+            <h3>SAC</h3>
+                <fieldset>
+                    <input id="txtnome" type="text" size="40" maxlength="50" placeholder="Preencha o nome completo"/> <br/>
+                    <input id="txtemail" type="email" size="40" placeholder="Preencha com seu e-mail"/> <br/>
+                    <input name="sexo" id="txtsexof" type="radio" value="F" checked />Feminino
+                    <input name="sexo" id="txtsexom" type="radio" value="M"/>Masculino <br/>
+                    <textarea cols=50 rows=4 placeholder="Seu comentário"></textarea> <br/> 
+                    <input type="button" value="ENVIAR" onClick="alert('Dados enviados com sucesso!!!')"/>
+                    <input type="reset" size="40" value="LIMPAR"/>
+                </fieldset>
+            </div>
+        </section>
+        <footer>
+            <h3>
+                Deixei a tecnologia crescer em você <hr/>
+                The Growth Tree
+            </h3>
+            <h4>
+                Grupo: Eduardo L., Kaique M., Kayky M, Pablo R. e Pedro R.
+            </h4>
+        </footer>
+    </body>
+</html>
