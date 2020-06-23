@@ -2,6 +2,11 @@
 <html lang="pt-br">
     <head>        
         <meta charset="utf8">
+        <meta name="author" content="Equipe The Growth Tree"/>
+        <meta name="description" content="Este é o site da empresa The Growth Tree, uma startup de desenvolvimento de sistemas"/>
+        <meta name="keywords" content="desenvilvimento, the growth tree, sistemas, programação"/>
+        <meta name="reply-to" content="tgtreedevelopment@gmail.com"/>
+        <meta name="robots" content="index.noflow"/>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
         <title>The Growth Tree</title>
         <style type="text/css">
@@ -27,48 +32,37 @@
             figure.foto-legenda
             {
                 position : relative;
+                width: 38%;
+                display: inline-block;
             }
             figure.foto-legenda figcaption
             {
                 opacity: 0;
-                position: absolute;
-                top: 0px;
-                background-color: rgba(0, 0, 0, 0.455);
-                width: 70%
-                height: 100%;
-                padding: 10px;
-                margin-left: 105px;
-                box-sizing: border-box;
-                transition: opacity 1s;
             }
             figure.foto-legenda img
             {
-                width: 70%;
-                height: 70%;
-                margin: 0px 110px 0px 105px;
+                width: 100%;
+                margin: 0% 5% 0% 5%;
             }
-            figure.foto-legenda:hover figcaption
-            {
-                opacity: 1;
-            } 
-            figure.sem-legenda img
-            {
-                width: 70%;
-                height: 70%;
-                margin: 0px 110px 0px 105px;
-            }
+
 
             div#SAC
             {
-                margin: -5% 30% 0% 30%;
+                background-color: rgb(94, 94, 94);
+                width: 50%;
+                margin: 5% auto 5% auto;
+                padding: 5%;
+                border: 2px solid rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
                 text-align: center;
             }
             input
             {
-                margin: 0% auto 0% auto%;
+                margin: 0% auto 0% auto;
+                width: 70%;
                 border: solid 2px rgb(0, 0, 0);
                 text-align: center;
-                padding: 3px;
+                padding: 1%;
                 margin: 1%;
                 background-color:rgba(0, 0, 0, 0.342);
                 color: rgb(255, 255, 255);
@@ -76,12 +70,13 @@
             textarea
             {
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                width: 70%;
                 border: solid 2px rgb(0, 0, 0);
                 background-color:rgba(0, 0, 0, 0.342);
                 color: rgb(255, 255, 255);
                 resize: none;
                 text-align: center;
-                padding: 3px;
+                padding: 1%;
                 margin:1%
             }
             fieldset
@@ -90,6 +85,15 @@
                 border-radius: 10px;
                 background-color:rgba(0, 0, 0, 0.342);
                 padding: 3%;
+            }
+            legend
+            {
+                border: solid 2px rgb(0, 0, 0);
+                border-radius: 10px;
+                background-color:rgb(68, 68, 68);
+                color: rgb(255, 255, 255);
+                padding: 3%;
+                font-size: 80%;
             }
             hr 
             {
@@ -152,6 +156,7 @@
 	            left:0%;
 	            text-align:center;
                 border-bottom: solid 2px rgb(0, 0, 0);
+                z-index: 1;
             }
             footer
             {
@@ -193,23 +198,125 @@
                 position: fixed;     
                 margin: -4% 90% 0% -50%;      
             }
-            img.col1 { width: 20%; }
-            img.col2 { width: 40%; }
-            img.col3 { width: 60%; }
-            img#toyota { width: 120%; margin-left: -11%;}
-            
-            table
+            .menu-lateral
             {
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                text-align: center;
-                padding-right: 18%;
+                background-color: rgb(64, 105, 167);
+                width: 0%;
+                height: 100%;
+                padding: 2%;
+                z-index: 1;
+                opacity: 0;
+                position: fixed;
+                top: 0%;
+                left: 0%;
+                overflow-x: hidden;
+                transition: 0.5s;
+                border-right: 3px solid rgb(0, 0, 0);
+
             }
+            .menu-lateral a 
+            {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 3vw;
+                color: rgb(255, 255, 255);
+                display: block;
+            }
+            .menu-lateral a:hover 
+            {
+                transition-duration: 0.5s;
+                transition-timing-function:ease;
+                transition-property:color;
+                color:rgb(0, 0, 0)
+            }
+
+            .menu-lateral .closebtn 
+            {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 3vw;
+                margin-left: 10%;
+            }
+
+            span#hamburguer
+            {
+                position: fixed;
+                opacity: 0;
+            }
+            div#logo
+            {
+                background-color: rgb(64, 105, 167);
+                width: 100%;
+                border-bottom: 3px solid rgb(0, 0, 0);
+                opacity: 0;
+            }
+            div#logo img
+            {
+                width: 40%;
+                margin: 0% 30% 0% 30%;
+            }
+
             section#redes img
             {
                 width: 5%;
             }
+            span
+            {
+                color: rgb(0, 0, 0);
+                text-decoration: none ;
+            }
+
+            @media only screen and (max-width: 768px) 
+            {
+                header
+                {
+                    opacity: 0;
+                    z-index: -1;
+                    width: 0%;
+                    height: 0%;
+                }
+                div#SAC
+                {
+                    width: 80%;
+                }
+                figure.foto-legenda
+                {
+                    margin-left: 30%;
+                }
+                p#inicio
+                {
+                    margin-bottom: 0%;
+                }
+                span#hamburguer
+                {
+                    opacity: 1;
+                }
+                div#logo
+                {
+                    opacity: 1;
+                }
+ 
+            }
 
         </style>
+
+    <script>
+            function abreMenu() 
+            {
+                document.getElementById("menu-lateral").style.width = "30%";
+                document.getElementById("menu-lateral").style.opacity = "1";
+                document.getElementById("hamburguer").style.marginLeft = "35%";
+                document.getElementsByTagName("section").style.marginLeft = "35%";
+            }
+
+            function fechaMenu()
+            {
+                document.getElementById("menu-lateral").style.width = "0%";
+                document.getElementById("menu-lateral").style.opacity = "0";
+                document.getElementById("hamburguer").style.marginLeft = "1%";
+            }
+    </script>
     </head>
     <body>
         <header>
@@ -227,6 +334,19 @@
                 </h4>
             </nav>
         </header>
+        <aside id="menu-lateral" class="menu-lateral"> <br/>
+            <a href="javascript:void(0)" class="closebtn" onClick="fechaMenu()">&times;</a> <br/>
+            <a href="#inicio"> Sobre Nós </a> <br/>
+            <a href="#pt2"> Redes Sociais </a> <br/>
+            <a href="#pt3"> Portifólio </a> <br/>
+            <a href="#pt4"> Sustentabilidade </a> <br/>
+            <a href="#pt5"> SAC </a> <br/>
+        </aside>
+        <span id="hamburguer" style="font-size:6vw;cursor:pointer;" onClick="abreMenu()">&#9776;</span>
+        <div id="logo">
+            <img src="https://3.bp.blogspot.com/-H07FhBHBR-U/Xt63lV7tEcI/AAAAAAAAbU0/DSZskboAT74El3WSZK1FUIJpZZgH_mr6gCK4BGAYYCw/s320/logo.png"/>
+        </div>
+
         <p id="inicio"></p>
         <br/> <br/> <br/> <br/>
         <script>
@@ -238,7 +358,6 @@
             }
             
             identifica("Bem-vindo ");
-
          </script>
         <section id="inicio">
             <h3> Sobre nós </h3>
@@ -254,9 +373,10 @@
         <section id="redes">
             <h3> Redes Sociais </h3>
             <p> Aqui estão alguns lugares nos quais voce consegue nos encontrar para acompanhar nossos trabalhos e/ou entrar em contato conosco <br/>
-                <img src="https://4.bp.blogspot.com/-hPRgXopifMY/Xt63Q4IMEaI/AAAAAAAAbT0/13HA4-PGQBEv-Ki5kyYVixGXv4TJSMUywCK4BGAYYCw/s320/insta.png"/><a href="https://www.instagram.com/tgtdevelopment/">@tgtdevelopment</a><br/> <br/>
-                <img src="https://1.bp.blogspot.com/-gzRQoEhNPzc/Xt63JXZ_5WI/AAAAAAAAbTg/KxWD-V0GZGwrZlaxsGEFrmtk9EK8l4rgACK4BGAYYCw/s320/face.png"/><a href="https://www.facebook.com/The-Growth-Tree-Development-107126324355554/">TG Tree</a><br/> <br/>
-                <img src="https://4.bp.blogspot.com/-XQVURiMHAOI/Xt63UbEeiVI/AAAAAAAAbT8/D8ITW1uJ2EsEbhG-kWNDchpkt_PrDuLdwCK4BGAYYCw/s400/linkedin.png"/> The Growth Tree <br/> <br/>
+                <img src="https://4.bp.blogspot.com/-hPRgXopifMY/Xt63Q4IMEaI/AAAAAAAAbT0/13HA4-PGQBEv-Ki5kyYVixGXv4TJSMUywCK4BGAYYCw/s320/insta.png"/><a href="https://www.instagram.com/tgtdevelopment/"> <span> @tgtdevelopment </span> </a><br/> <br/>
+                <img src="https://1.bp.blogspot.com/-gzRQoEhNPzc/Xt63JXZ_5WI/AAAAAAAAbTg/KxWD-V0GZGwrZlaxsGEFrmtk9EK8l4rgACK4BGAYYCw/s320/face.png"/><a href="https://www.facebook.com/The-Growth-Tree-Development-107126324355554/"> <span> TG Tree </span> </a><br/> <br/>
+                <img src="https://4.bp.blogspot.com/-XQVURiMHAOI/Xt63UbEeiVI/AAAAAAAAbT8/D8ITW1uJ2EsEbhG-kWNDchpkt_PrDuLdwCK4BGAYYCw/s400/linkedin.png"/> <span> The Growth Tree </span>
+                <br/> <br/>
             </p>
         </section>
         <p id="pt3"></p>
@@ -270,34 +390,40 @@
             </ul>
             <h3> Portifólio </h3>
             <p> Aqui temos alguns exemplos dos nossos serviços, essas são empresas pras quais já trabalhamos: </p>
-            <table id="empresas">
-                <tr>
-                    <td class="col1">
-                        <img class="col1" src="https://1.bp.blogspot.com/-orJmHxUzpVg/Xt63bkPin9I/AAAAAAAAbUU/tNhRoymVanosdeKkPgtPUudZ74-dNPoWQCK4BGAYYCw/s320/pg.png"/></figure> </td>
-                    <td> Python Games </td>
-                    <td class="col2"> <img class="col2" src="https://4.bp.blogspot.com/-_YFBmE1qYDY/Xt63GTK6lkI/AAAAAAAAbTY/a9huNKDbOwsy2gUafiQRN-WnE3IcznJUQCK4BGAYYCw/s320/extra.png"/> </td> 
-                    <td> Extra </td>
-                    <td> <img class="col3" src="https://4.bp.blogspot.com/-0SkXIAqiBRo/Xt6275_QuDI/AAAAAAAAbTA/xe108CB817scCg14c6-aZ3Aq9l6kYEO3QCK4BGAYYCw/s320/bmw.png"/> </td>
-                    <td  class="co31"> BMW </td>
-                </tr>
-                <tr>
-                    <td class="col1"> <img class="col1" src="https://4.bp.blogspot.com/-tbzgTyprgJ8/Xt63DdmmqhI/AAAAAAAAbTQ/DoUSg7uFM7YZGaRslAF9XYeG_-3Zg3DdgCK4BGAYYCw/s400/eg.png"/> </td>
-                    <td> Epic Games </td>
-                    <td class="col2"> <img class="col2" src="https://1.bp.blogspot.com/-Cd0_MMs9TzA/Xt63eF04WzI/AAAAAAAAbUc/pUGnmNRZFXEd_I8RNQz_1tR185gbMPBrQCK4BGAYYCw/s320/sonda.png"/> </td> 
-                    <td> Sonda </td>
-                    <td class="col3"> <img class="col3" src="https://4.bp.blogspot.com/-EOi3Y-ZUe8I/Xt63L2yMQaI/AAAAAAAAbTs/FmQX_eJ9Svo3_Lvrpi0yQ14aNmLiECGKACK4BGAYYCw/s400/honda.PNG"/> </td>
-                    <td> Honda </td>
-                </tr>
-                <tr>
-                    <td class="col1"> <img class="col1" src="https://4.bp.blogspot.com/-5B7IF46nGYg/Xt63AsUFh9I/AAAAAAAAbTI/Lxu4ifx_xE0heYhZECOckMNHLPpKmB-GwCK4BGAYYCw/s400/ea.png"/> </td>
-                    <td> EA </td>
-                    <td class="col2"> <img class="col2" src="https://2.bp.blogspot.com/-MTSsvZxe6Es/Xt63YGHtgzI/AAAAAAAAbUI/5npP0AYXlgAQGUR2zbbAy70TcY4hJ0EiACK4BGAYYCw/s320/makro.png"/> </td> 
-                    <td> Makro </td>
-                    <td class="col3"> <img id="toyota" src="https://3.bp.blogspot.com/-f6nVarcKNVQ/Xt63hF6uAHI/AAAAAAAAbUo/mnnnPILDJcIVqYT-t7Z4Kj3NvwQZZi0iQCK4BGAYYCw/s320/toyota.PNG"/> </td>
-                    <td> Toyota </td>
-                </tr>
 
-            </table>
+            <figure class="foto-legenda">     
+                <img src="https://4.bp.blogspot.com/-5B7IF46nGYg/Xt63AsUFh9I/AAAAAAAAbTI/Lxu4ifx_xE0heYhZECOckMNHLPpKmB-GwCK4BGAYYCw/s400/ea.png"/>  
+                <figcaption> EA </figcaption>  
+            </figure>
+            <figure class="foto-legenda">
+                <img src="https://4.bp.blogspot.com/-_YFBmE1qYDY/Xt63GTK6lkI/AAAAAAAAbTY/a9huNKDbOwsy2gUafiQRN-WnE3IcznJUQCK4BGAYYCw/s320/extra.png"/>   
+                <figcaption> Extra </figcaption>  
+            </figure>
+            <figure class="foto-legenda">
+                <img src="https://4.bp.blogspot.com/-0SkXIAqiBRo/Xt6275_QuDI/AAAAAAAAbTA/xe108CB817scCg14c6-aZ3Aq9l6kYEO3QCK4BGAYYCw/s320/bmw.png"/>  
+                <figcaption> BMW </figcaption>  
+            </figure>
+            <figure class="foto-legenda">
+                <img src="https://4.bp.blogspot.com/-tbzgTyprgJ8/Xt63DdmmqhI/AAAAAAAAbTQ/DoUSg7uFM7YZGaRslAF9XYeG_-3Zg3DdgCK4BGAYYCw/s400/eg.png"/>  
+                <figcaption> Epic Games </figcaption>  
+            </figure>
+            <figure class="foto-legenda">
+                <img src="https://1.bp.blogspot.com/-Cd0_MMs9TzA/Xt63eF04WzI/AAAAAAAAbUc/pUGnmNRZFXEd_I8RNQz_1tR185gbMPBrQCK4BGAYYCw/s320/sonda.png"/>   
+                <figcaption> Sonda </figcaption>  
+            </figure>
+            <figure class="foto-legenda">
+                <img src="https://1.bp.blogspot.com/-orJmHxUzpVg/Xt63bkPin9I/AAAAAAAAbUU/tNhRoymVanosdeKkPgtPUudZ74-dNPoWQCK4BGAYYCw/s320/pg.png"/>
+                <figcaption> Python Games </figcaption>  
+            </figure>
+            <figure class="foto-legenda">
+                <img src="https://2.bp.blogspot.com/-MTSsvZxe6Es/Xt63YGHtgzI/AAAAAAAAbUI/5npP0AYXlgAQGUR2zbbAy70TcY4hJ0EiACK4BGAYYCw/s320/makro.png"/>   
+                <figcaption> Makro </figcaption>  
+            </figure>
+            <figure class="foto-legenda">
+                <img src="https://3.bp.blogspot.com/-f6nVarcKNVQ/Xt63hF6uAHI/AAAAAAAAbUo/mnnnPILDJcIVqYT-t7Z4Kj3NvwQZZi0iQCK4BGAYYCw/s320/toyota.PNG"/>  
+                <figcaption> Toyota </figcaption>  
+            </figure>
+
         </section>
         <p id="pt4"></p>
         <section>
@@ -308,16 +434,33 @@
         <section>
             <div id="SAC">
             <h3>SAC</h3>
-                <fieldset>
-                    <input id="txtnome" type="text" size="40" maxlength="50" placeholder="Preencha o nome completo"/> <br/>
-                    <input id="txtemail" type="email" size="40" placeholder="Preencha com seu e-mail"/> <br/>
-                    <input name="sexo" id="txtsexof" type="radio" value="F" checked />Feminino
-                    <input name="sexo" id="txtsexom" type="radio" value="M"/>Masculino <br/>
-                    <textarea cols=50 rows=4 placeholder="Seu comentário"></textarea> <br/> 
-                    <input type="button" value="ENVIAR" onClick="alert('Dados enviados com sucesso!!!')"/>
-                    <input type="reset" size="40" value="LIMPAR"/>
-                </fieldset>
-            </div>
+            <br/>
+            <fieldset>
+                <legend> Identificação </legend>
+                <input type="text" name="tNome" id="cNome" size="40" maxlength="40" placeholder="Nome completo" /> <br/>
+                <input type="password" name="tSenha" id="cSenha" size="16" maxlenght="16" placeholder="Senha" /> <br/>
+                <input type="email" name="tEmail" id="cEmail" size="40" maxlength="40" placeholder="E-mail" /><br/>
+                <input type="radio" name="tSexo" id="cMasc" checked/> <br/> <label for="cMasc"> Masculino </label> <br/>
+                <input type="radio" name="tSexo" id="cFem"/> <br/> <label for="cFem"> Feminino </label><br/>
+                <br/> Digite a data de Nascimento <br/>
+                <input type="date" name="tNasc" id="cNasc"/>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend> Endereço </legend>
+                <input type="text" name="tEnd" id="cEnd" size="40" maxlength="40" placeholder="Endereço"/> <br/>
+                <input type="number" name="tNum" id="cNum" min="0" max="99999" maxlenght="5" placeholder="Número"/><br/>
+                <input type="text" name="tComp" id="cComp" size="40" maxlength="40" placeholder="Complemento"/>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend> Motivo do contato </legend>
+                <textarea cols=50 rows=4 placeholder="Digite aqui seu comentário"></textarea> 
+            </fieldset>
+            <br/>
+            <input type="button" value="ENVIAR" onClick="alert('Dados enviados com sucesso!!!')"/>
+            <input type="reset" value="LIMPAR" />            
+        </div>
         </section>
         <footer>
             <h3>
